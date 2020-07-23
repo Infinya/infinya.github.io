@@ -59,7 +59,6 @@ function swapTiles(){// function to swap the two selected tiles
       break;         
     }
   }
-  lastNum+=1
   if(multichecked==true){
     alert("Please only check 2 boxes.")
     uncheckAll(lastNum , checks);
