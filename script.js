@@ -34,6 +34,7 @@ function randomTiles() {// gets tiles arranged in a random order
 }
 function swapTiles(){// function to swap the two selected tiles
   counter+=1;
+  var multichecked = false ; //more than 3 checked
   var checks = document.getElementsByName('check'); // gets all the checkbox variables
   var lastNum;// the index i after the firstCheck
 	for(var i=0; i<checks.length; i++){// gets the value of first checked box
@@ -47,17 +48,36 @@ function swapTiles(){// function to swap the two selected tiles
   for(var i = lastNum; i<checks.length;i++ ){// gets the value of second checked box
       if(checks[i].checked==true){
           var secondCheck = checks[i].value;
-          lastNum=i;
+          lastNum=i+1;
           break;
             }
           }
-    checks[lastNum].checked=false;
-
+    checks[lastNum-1].checked=false;
+  for(var i=lastNum ; i<checks.length; i++){
+    if(checks[i].checked==true){
+      multichecked = true;
+      break;         
+    }
+  }
+  lastNum+=1
+  if(multichecked==true){
+    alert("Please only check 2 boxes.")
+    uncheckAll(lastNum , checks);
+  }
+  else{
   var tempCheck = document.getElementById(parseInt(firstCheck)).src;// sets a temporary check for firstcheck val
   document.getElementById(parseInt(firstCheck)).src = document.getElementById(parseInt(secondCheck)).src;//makes first check=second check
   document.getElementById(parseInt(secondCheck)).src = tempCheck;  // makes second check= temp check(original first check)
   
   winner();
+  }
+}
+function uncheckAll(lastNum, checks){
+  for(i=lastNum; i<checks.length;i++){
+    if(checks[i].checked==true){
+      checks[i].checked=false;
+    }
+  }
 }
 function winner(){// checks if it all tiles are placed correctly
   if(document.getElementById("1").src == tileArray2[8]){
