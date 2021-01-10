@@ -1,11 +1,6 @@
-
-/*var tileArray = ["https://bit.ly/2E4sg29" , "https://bit.ly/30vh6eq" , "https://bit.ly/3hpp9Ac" , 
-                 "https://bit.ly/2WLUVjb" , "https://bit.ly/2Bivf62" , "https://bit.ly/3fSRYon" ,
-                 "https://bit.ly/39kcNGF" , "https://bit.ly/2BoC0U6"  , "https://bit.ly/3fRlPNU"
-                ]// the 9 tiles*/
-var tileArray2 = ["https://bit.ly/30vN3mI","https://bit.ly/2ZRZeLE","https://bit.ly/32H26gh",
-                 "https://bit.ly/2BlcuPp", "https://bit.ly/2BqeENS" ,"https://bit.ly/3jx9MI0",
-                 "https://bit.ly/2WLVR7f" , "https://bit.ly/32JJrjS", "https://bit.ly/39rFstK"]
+var tileArray2 = ["https://bit.ly/3qadZ74","https://bit.ly/2XqAR5B","https://bit.ly/3hYwjx3",
+                 "https://bit.ly/38urlET", "https://bit.ly/2LhXp68" ,"https://bit.ly/3sbSKmS",
+                 "https://bit.ly/3q7bd27" , "https://bit.ly/3nwr9cA", "https://bit.ly/39mlalt"]
 //var differentTile = tileArray2;
 var i = 0;
 /*function differentPic(){
@@ -102,3 +97,4 @@ function winner(){// checks if it all tiles are placed correctly
     
   }
 }
+
